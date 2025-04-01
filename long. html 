@@ -1,13 +1,71 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
- <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Пример веб-страницы</title>
- </head>
- <body>
-  <h1>Заголовок</h1>
-  <!-- Комментарий -->
-  <p>Первый абзац.</p>
-  <p>Второй абзац.</p>
- </body>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простой сайт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать на мой сайт!</h1>
+    </header>
+    <main>
+        <section id="info">
+            <p>Это пример простого сайта с использованием HTML, CSS и JavaScript в одном файле.</p>
+            <button id="clickMeButton">Нажми меня!</button>
+            <p id="message"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Мой сайт</p>
+    </footer>
+    <script>
+        document.getElementById('clickMeButton').addEventListener('click', function() {
+            document.getElementById('message').textContent = 'Кнопка была нажата!';
+        });
+    </script>
+</body>
 </html>
